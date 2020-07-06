@@ -1,0 +1,172 @@
+/*
+  BODY - Não está sendo aplicado após inserção do bootstrap
+  Motivo
+  Não está aplicando pois dentro do css do bootstrap também tem o body
+  e como o link do css do bootstrap está sendo chamado por último
+  ele assume o body do bootstrap e não o do css nativo criado
+  Solução
+  Alterando a ordem da chamada aplicou as configurações de estilo
+*/
+
+/*
+Outro problema gerado com a solução acima
+Com a solução acima gerou outro problema o container-fluid não esta funcionando devidamente
+está como se tivesse usado o container (elementos centralizados)
+Solução
+Apagar margin-left e margin-right do body
+*/
+
+body 
+{    
+    background: rgb(112, 146, 190);
+    color:#ffffff;
+    
+    /*margin-left: 100px;
+    margin-right: 223px;*/
+
+}
+
+header
+{
+    margin-top: 33px;
+    /* teste para cor de backgorund */
+    /* background-color: red; */
+}
+
+h1
+{
+    color:whitesmoke;
+    font-family: monospace;
+    padding-bottom: 10px;
+}
+
+p
+{
+    font-size: 18px;
+    /*não mais necessário apliquei a classe distancia-logo-menu nas <li>
+    padding-right: 33px; | colocado para gerar uma distância entre texto após logo e início menu |
+    */
+    text-align: center;
+}
+
+footer
+{
+    margin-top: 150px;
+    margin-bottom: 55px;
+    font-family: sans-serif;
+    color: gray;
+}
+
+section
+{
+    margin-top: 55px;
+}
+
+div
+{
+    margin-bottom: 30px;
+}
+
+/* pesquisar opções para deixar o menu em linha 
+nav 
+{
+    display: inline;
+}
+*/
+
+/*Teste HTML e CSS FUNCIONAL
+Daniel
+{
+    color: Blue;
+}
+Victor
+{
+    color:yellow;
+}
+*/
+
+.img_padrao
+{
+    width:130px;
+}
+
+/* Início do Bootstrap - após bootstrap aplicar CSS anterior ao Bootstrap*/
+
+.navbar
+{
+    background-color: rgb(153, 217, 234);
+}
+
+.especialistas
+{
+    background-color: rgb(172, 172, 197);
+}
+
+.margin
+{
+    padding-top: 30px;
+    padding-bottom: 23px;
+}
+
+.projetos
+{
+    background-color: rgb(172, 172, 197);
+}
+
+.clientes
+{
+    background-color: rgb(172, 172, 197);
+}
+
+.servicos
+{
+    background-color: rgb(172, 172, 197);
+}
+
+.parceiro
+{
+    background-color: rgb(172, 172, 197);
+}
+
+.contato
+{
+    background-color: rgb(172, 172, 197);
+}
+
+.distancia-logo-menu
+{
+    padding-left: 23px;
+    /* padding-top: 23px; alinhamento entre h5 (texto após logo) e menu */
+    width: 100%;
+    padding-right: 50px;
+}
+
+.distancia-texto-menu
+{   
+    padding-right: 23px;
+    width: 100%;
+}
+
+h5
+{
+    color: rgb(202, 136, 202);
+}
+
+.rodape
+{
+    background-color: rgb(40, 40, 41);
+    padding-top: 23px;
+    padding-bottom: 1px;
+    margin-bottom: 0px;
+    margin-top: 123px;
+}
+
+.bottom
+{
+    padding-bottom: 10px;
+}
+
+li
+{
+    padding-bottom: 5px; /*alinhamento do menu com a letra do logo "Developer Provider"*/
+}
